@@ -124,7 +124,7 @@
   <li class="nav-item">
     <app-button [class]="!selectedCategoryId ? 'nav-link btn active' : 'nav-link btn' " [spinner]="false"
       [id]="'all_category'" (click)="selectCategory()">
-      All
+      {{ 'all' | translate }}
     </app-button>
   </li>
   <li class="nav-item" *ngFor="let category of categories">

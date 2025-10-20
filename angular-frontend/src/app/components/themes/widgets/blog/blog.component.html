@@ -13,7 +13,7 @@
           <div>
             <div class="blog-box ratio_65" [class.sticky-blog-box]="blog?.is_sticky === 1">
               <div class="blog-label-tag" *ngIf="blog?.is_featured">
-                <span>{{ 'Featured' | translate }}</span>
+                <span>{{ 'featured' | translate }}</span>
               </div>
               <div class="blog-box-image">
                   <a [routerLink]="['/blog/', blog?.slug]" 

@@ -29,7 +29,7 @@
                         <td>
                             <div ngbDropdown class="d-inline-block" container="body" placement="bottom-end">
                                 <button type="button" class="btn dropdown-toggle" ngbDropdownToggle>
-                                    {{ 'Download' | translate }}
+                                    {{ 'download' | translate }}
                                 </button>
                                 <div ngbDropdownMenu class="download-dropdown-menu">
                                     <button ngbDropdownItem (click)="downloadFiles(data.id)" *ngIf="data.can_download_file">{{'all_files' | translate}} &amp; {{'documentation' | translate}}</button>

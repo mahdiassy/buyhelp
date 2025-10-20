@@ -24,17 +24,17 @@
                             <img [src]="deal?.product?.product_thumbnail?.original_url" class="img-fluid product-image" [alt]="deal?.product?.name">
                         </a>
                         <ul class="option">
-                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Quick View">
+                            <li data-bs-toggle="tooltip" data-bs-placement="top" [attr.title]="'quick_view' | translate">
                                 <a href="javascript:void(0)" [routerLink]="['/product/', deal?.product?.slug]">
                                   <i class="ri-eye-line"></i>
                                 </a>
                             </li>
-                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
+                            <li data-bs-toggle="tooltip" data-bs-placement="top" [attr.title]="'wishlist' | translate">
                                 <a href="javascript:void(0)" class="notifi-wishlist" (click)="addToWishlist(deal.product)">
                                   <i class="ri-heart-{{deal?.product?.is_wishlist ? 'fill' : 'line'}}"  [class.theme-color]="deal?.product?.is_wishlist" ></i>
                                 </a>
                             </li>
-                            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
+                            <li data-bs-toggle="tooltip" data-bs-placement="top" [attr.title]="'compare' | translate">
                                 <a href="javascript:void(0)" (click)="addToCompare(deal.product.id)">
                                   <i class="ri-refresh-line"></i>
                                 </a>
