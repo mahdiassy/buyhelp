@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "filesScanned": 218,
+    "totalIssues": 4,
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 3
+  },
+  "issues": {
+    "critical": [],
+    "high": [],
+    "medium": [
+      {
+        "file": "src/app/components/shop/product/product-details/widgets/video-play-modal/video-play-modal.component.html",
+        "line": 3,
+        "type": "aria_label",
+        "text": "Close",
+        "original": "<button type=\"button\" class=\"btn-close\" aria-label=\"Close\" (click)=\"modal.dismiss('Cross click')\">",
+        "severity": "MEDIUM"
+      }
+    ],
+    "low": [
+      {
+        "file": "src/app/components/themes/widgets/deal/deal.component.html",
+        "line": 27,
+        "type": "title_attr",
+        "text": "Quick View",
+        "original": "<li data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"Quick View\">",
+        "severity": "LOW"
+      },
+      {
+        "file": "src/app/components/themes/widgets/deal/deal.component.html",
+        "line": 32,
+        "type": "title_attr",
+        "text": "Wishlist",
+        "original": "<li data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"Wishlist\">",
+        "severity": "LOW"
+      },
+      {
+        "file": "src/app/components/themes/widgets/deal/deal.component.html",
+        "line": 37,
+        "type": "title_attr",
+        "text": "Compare",
+        "original": "<li data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"Compare\">",
+        "severity": "LOW"
+      }
+    ]
+  }
+}

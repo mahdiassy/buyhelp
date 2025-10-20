@@ -1,0 +1,251 @@
+{
+  "summary": {
+    "totalKeys": {
+      "en": 692,
+      "fr": 692,
+      "ar": 692
+    },
+    "untranslated": {
+      "french": 41,
+      "arabic": 9
+    },
+    "templateUsage": {
+      "uniqueKeys": 378,
+      "missingKeys": 1
+    }
+  },
+  "untranslatedFrench": [
+    {
+      "key": "action",
+      "value": "Action"
+    },
+    {
+      "key": "background_image",
+      "value": "Background Image"
+    },
+    {
+      "key": "berlin",
+      "value": "Berlin"
+    },
+    {
+      "key": "blog",
+      "value": "Blog"
+    },
+    {
+      "key": "code",
+      "value": "Code"
+    },
+    {
+      "key": "collections",
+      "value": "Collections"
+    },
+    {
+      "key": "confirmation",
+      "value": "Confirmation"
+    },
+    {
+      "key": "contact",
+      "value": "Contact"
+    },
+    {
+      "key": "cookies",
+      "value": "Cookies"
+    },
+    {
+      "key": "coupon",
+      "value": "Coupon"
+    },
+    {
+      "key": "coverimg",
+      "value": "cover-img"
+    },
+    {
+      "key": "date",
+      "value": "Date"
+    },
+    {
+      "key": "denver",
+      "value": "Denver"
+    },
+    {
+      "key": "description",
+      "value": "Description"
+    },
+    {
+      "key": "documentation",
+      "value": "Documentation"
+    },
+    {
+      "key": "faq",
+      "value": "FAQ"
+    },
+    {
+      "key": "ifsc",
+      "value": "IFSC"
+    },
+    {
+      "key": "image",
+      "value": "Image"
+    },
+    {
+      "key": "info",
+      "value": "Information"
+    },
+    {
+      "key": "inform_you_that_the_faq__currently_unavailable",
+      "value": "J'ai le regret de vous informer que la FAQ est actuellement indisponible."
+    },
+    {
+      "key": "ltr",
+      "value": "LTR"
+    },
+    {
+      "key": "madrid",
+      "value": "Madrid"
+    },
+    {
+      "key": "menu",
+      "value": "Menu"
+    },
+    {
+      "key": "message",
+      "value": "Message"
+    },
+    {
+      "key": "min",
+      "value": "Min"
+    },
+    {
+      "key": "my_wish",
+      "value": "My Wish"
+    },
+    {
+      "key": "nonrefundable",
+      "value": "Non-Refundable"
+    },
+    {
+      "key": "notifications",
+      "value": "Notifications"
+    },
+    {
+      "key": "offer_gif",
+      "value": "offer gif"
+    },
+    {
+      "key": "option",
+      "value": "Option"
+    },
+    {
+      "key": "ordertracking",
+      "value": "order-tracking"
+    },
+    {
+      "key": "osaka",
+      "value": "Osaka"
+    },
+    {
+      "key": "paris",
+      "value": "Paris"
+    },
+    {
+      "key": "points",
+      "value": "Points"
+    },
+    {
+      "key": "q",
+      "value": "Q"
+    },
+    {
+      "key": "rome",
+      "value": "Rome"
+    },
+    {
+      "key": "rtl",
+      "value": "RTL"
+    },
+    {
+      "key": "services",
+      "value": "Services"
+    },
+    {
+      "key": "tokyo",
+      "value": "Tokyo"
+    },
+    {
+      "key": "transactions",
+      "value": "Transactions"
+    },
+    {
+      "key": "usd",
+      "value": "USD"
+    }
+  ],
+  "untranslatedArabic": [
+    {
+      "key": "background_image",
+      "value": "Background Image"
+    },
+    {
+      "key": "coverimg",
+      "value": "cover-img"
+    },
+    {
+      "key": "ltr",
+      "value": "LTR"
+    },
+    {
+      "key": "my_wish",
+      "value": "My Wish"
+    },
+    {
+      "key": "nonrefundable",
+      "value": "Non-Refundable"
+    },
+    {
+      "key": "offer_gif",
+      "value": "offer gif"
+    },
+    {
+      "key": "ordertracking",
+      "value": "order-tracking"
+    },
+    {
+      "key": "rtl",
+      "value": "RTL"
+    },
+    {
+      "key": "sku",
+      "value": "SKU"
+    }
+  ],
+  "missingKeys": [
+    "t_have_an_account"
+  ],
+  "menuTranslations": {
+    "pages": {
+      "en": "Pages",
+      "fr": "Pages Web",
+      "ar": "الصفحات"
+    },
+    "products": {
+      "en": "Products",
+      "fr": "Des produits",
+      "ar": "المنتجات"
+    },
+    "seller": {
+      "en": "Seller",
+      "fr": "Vendeuse",
+      "ar": "البائع"
+    },
+    "services": {
+      "en": "Services",
+      "fr": "Services",
+      "ar": "الخدمات"
+    },
+    "support": {
+      "en": "Support",
+      "fr": "Assistance",
+      "ar": "الدعم"
+    }
+  }
+}

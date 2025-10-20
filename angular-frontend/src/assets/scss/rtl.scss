@@ -1,0 +1,660 @@
+/**
+ * ============================================
+ * RTL (Right-to-Left) Support Stylesheet
+ * ============================================
+ * 
+ * This file provides comprehensive RTL support for Arabic language
+ * Automatically applied when <html dir="rtl"> is set
+ * 
+ * File: src/assets/scss/rtl.scss
+ * ============================================
+ */
+
+// ==================================
+// Global RTL Overrides
+// ==================================
+
+[dir="rtl"],
+html[dir="rtl"],
+.rtl {
+  
+  // Text Alignment
+  text-align: right;
+  direction: rtl;
+
+  // Float Reversal
+  .float-left {
+    float: right !important;
+  }
+
+  .float-right {
+    float: left !important;
+  }
+
+  .float-start {
+    float: right !important;
+  }
+
+  .float-end {
+    float: left !important;
+  }
+
+  // Text Alignment Overrides
+  .text-left {
+    text-align: right !important;
+  }
+
+  .text-right {
+    text-align: left !important;
+  }
+
+  .text-start {
+    text-align: right !important;
+  }
+
+  .text-end {
+    text-align: left !important;
+  }
+
+  // ==================================
+  // Margin & Padding Reversal
+  // ==================================
+
+  // Margin Left/Right Swap
+  .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+  .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+  .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+  .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+  .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
+  .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
+
+  .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+  .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+  .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+  .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+  .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
+  .me-auto { margin-left: auto !important; margin-right: 0 !important; }
+
+  // Padding Left/Right Swap
+  .ps-1 { padding-right: 0.25rem !important; padding-left: 0 !important; }
+  .ps-2 { padding-right: 0.5rem !important; padding-left: 0 !important; }
+  .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+  .ps-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
+  .ps-5 { padding-right: 3rem !important; padding-left: 0 !important; }
+
+  .pe-1 { padding-left: 0.25rem !important; padding-right: 0 !important; }
+  .pe-2 { padding-left: 0.5rem !important; padding-right: 0 !important; }
+  .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+  .pe-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
+  .pe-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+
+  // ==================================
+  // Flexbox Reversal
+  // ==================================
+
+  .flex-row {
+    flex-direction: row-reverse !important;
+  }
+
+  .justify-content-start {
+    justify-content: flex-end !important;
+  }
+
+  .justify-content-end {
+    justify-content: flex-start !important;
+  }
+
+  // ==================================
+  // Bootstrap Components
+  // ==================================
+
+  // Navbar
+  .navbar-nav {
+    .nav-item {
+      margin-left: 0;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  // Dropdown
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+    text-align: right;
+
+    &.dropdown-menu-end {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  .dropdown-toggle::after {
+    margin-left: 0;
+    margin-right: 0.255em;
+  }
+
+  // Modal
+  .modal-header {
+    .btn-close {
+      margin: 0 auto 0 -0.5rem;
+    }
+  }
+
+  // Breadcrumb
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: 0;
+    padding-right: 0.5rem;
+
+    &::before {
+      float: right;
+      padding-left: 0.5rem;
+      padding-right: 0;
+      content: "\\";
+    }
+  }
+
+  // Pagination
+  .pagination {
+    .page-item {
+      &:first-child .page-link {
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &:last-child .page-link {
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  // Alert
+  .alert-dismissible {
+    padding-right: 3rem;
+    padding-left: 1rem;
+
+    .btn-close {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  // Toast
+  .toast {
+    .btn-close {
+      margin-left: auto;
+      margin-right: -0.375rem;
+    }
+  }
+
+  // List Group
+  .list-group {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  // Form Controls
+  .form-check {
+    padding-left: 0;
+    padding-right: 1.5em;
+
+    .form-check-input {
+      float: right;
+      margin-left: 0;
+      margin-right: -1.5em;
+    }
+  }
+
+  .form-select {
+    padding-left: 2.25rem;
+    padding-right: 0.75rem;
+    background-position: left 0.75rem center;
+  }
+
+  // Input Group
+  .input-group {
+    .input-group-text,
+    .form-control,
+    .form-select {
+      &:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+      }
+
+      &:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+      }
+    }
+  }
+
+  // ==================================
+  // Custom Component Overrides
+  // ==================================
+
+  // Header & Navigation
+  .header {
+    .logo {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .header-nav-right {
+      margin-right: auto;
+      margin-left: 0;
+
+      > * {
+        margin-right: 0;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  // Product Grid
+  .product-box {
+    .product-detail {
+      text-align: right;
+    }
+
+    .product-action {
+      right: auto;
+      left: 10px;
+    }
+
+    .rating {
+      margin-right: 0;
+      margin-left: 0.5rem;
+    }
+  }
+
+  // Cart
+  .cart-table {
+    .product-name {
+      text-align: right;
+    }
+
+    .remove-btn {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  // Sidebar
+  .sidebar {
+    border-right: none;
+    border-left: 1px solid #dee2e6;
+  }
+
+  // Search Bar
+  .search-box {
+    .search-icon {
+      right: auto;
+      left: 1rem;
+    }
+
+    input {
+      padding-right: 1rem;
+      padding-left: 3rem;
+    }
+  }
+
+  // Category Menu
+  .category-menu {
+    .dropdown-menu {
+      right: 100%;
+      left: auto;
+    }
+
+    .has-submenu {
+      &::after {
+        float: left;
+        margin-left: 0;
+        margin-right: auto;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // Filters
+  .filter-section {
+    .form-check {
+      padding-right: 1.5em;
+      padding-left: 0;
+    }
+
+    .checkbox {
+      float: right;
+      margin-right: -1.5em;
+      margin-left: 0;
+    }
+  }
+
+  // Price Range
+  .price-range {
+    .from,
+    .to {
+      text-align: right;
+    }
+  }
+
+  // Product Details
+  .product-details {
+    .product-meta {
+      li {
+        text-align: right;
+
+        span {
+          float: left;
+        }
+      }
+    }
+
+    .social-share {
+      .share-icon {
+        margin-left: 0;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  // Tabs
+  .nav-tabs {
+    .nav-link {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+  }
+
+  // Timeline
+  .timeline {
+    &::before {
+      right: 0;
+      left: auto;
+    }
+
+    .timeline-item {
+      padding-right: 2rem;
+      padding-left: 0;
+
+      &::before {
+        right: -6px;
+        left: auto;
+      }
+    }
+  }
+
+  // Checkout Steps
+  .checkout-steps {
+    .step {
+      &::after {
+        right: -50%;
+        left: auto;
+      }
+
+      &:first-child::after {
+        display: none;
+      }
+    }
+  }
+
+  // Footer
+  .footer {
+    .footer-menu {
+      text-align: right;
+    }
+
+    .social-links {
+      justify-content: flex-end;
+
+      li {
+        margin-left: 1rem;
+        margin-right: 0;
+
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  // Icons
+  .icon-left {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+
+  .icon-right {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  // Arrows
+  .arrow-left {
+    transform: rotate(180deg);
+  }
+
+  .arrow-right {
+    transform: rotate(180deg);
+  }
+
+  // Carousel Controls
+  .carousel-control-prev {
+    right: 0;
+    left: auto;
+  }
+
+  .carousel-control-next {
+    left: 0;
+    right: auto;
+  }
+
+  // Owl Carousel
+  .owl-carousel {
+    direction: ltr;
+
+    .owl-nav {
+      direction: rtl;
+
+      .owl-prev {
+        right: 0;
+        left: auto;
+      }
+
+      .owl-next {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+
+  // Badge Position
+  .badge {
+    &.badge-top-right {
+      right: auto;
+      left: 0;
+    }
+
+    &.badge-top-left {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  // Sticky Elements
+  .sticky-cart,
+  .sticky-compare {
+    right: auto;
+    left: 20px;
+  }
+
+  // Mobile Menu
+  .mobile-menu {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+
+  // Notification Badge
+  .notification-badge {
+    right: auto;
+    left: -5px;
+  }
+
+  // Back to Top Button
+  .back-to-top {
+    right: auto;
+    left: 20px;
+  }
+}
+
+// ==================================
+// RTL Typography Adjustments
+// ==================================
+
+[dir="rtl"] {
+  // Font adjustments for Arabic
+  font-family: 'Cairo', 'Tajawal', 'Almarai', Arial, sans-serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+
+  p, span, div {
+    line-height: 1.8;
+  }
+
+  // Number formatting
+  .price,
+  .amount,
+  .quantity {
+    font-family: 'Arial', sans-serif; // Keep numbers in LTR font
+    direction: ltr;
+    display: inline-block;
+  }
+}
+
+// ==================================
+// RTL Animation Adjustments
+// ==================================
+
+[dir="rtl"] {
+  // Slide animations
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  // Reverse slide animations
+  .slide-in-right {
+    animation: slideInLeft 0.3s ease-out;
+  }
+
+  .slide-in-left {
+    animation: slideInRight 0.3s ease-out;
+  }
+}
+
+// ==================================
+// Media Queries for RTL
+// ==================================
+
+@media (max-width: 991px) {
+  [dir="rtl"] {
+    // Mobile menu adjustments
+    .offcanvas {
+      &.offcanvas-start {
+        right: 0;
+        left: auto;
+      }
+
+      &.offcanvas-end {
+        left: 0;
+        right: auto;
+      }
+    }
+
+    // Mobile header
+    .mobile-header {
+      .menu-toggle {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  [dir="rtl"] {
+    // Mobile product grid
+    .product-box {
+      .product-action {
+        left: 5px;
+        right: auto;
+      }
+    }
+
+    // Mobile cart
+    .cart-sidebar {
+      right: auto;
+      left: 0;
+      transform: translateX(-100%);
+
+      &.show {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+// ==================================
+// Utility Classes for RTL
+// ==================================
+
+[dir="rtl"] {
+  .rtl-mirror {
+    transform: scaleX(-1);
+  }
+
+  .rtl-hidden {
+    display: none !important;
+  }
+
+  .ltr-only {
+    display: none !important;
+  }
+}
+
+[dir="ltr"] {
+  .rtl-only {
+    display: none !important;
+  }
+}

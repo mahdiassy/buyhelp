@@ -1,0 +1,147 @@
+{
+  "summary": {
+    "totalKeys": 692,
+    "frenchUntranslated": 32,
+    "arabicUntranslated": 2
+  },
+  "french": [
+    {
+      "key": "action",
+      "value": "Action"
+    },
+    {
+      "key": "berlin",
+      "value": "Berlin"
+    },
+    {
+      "key": "blog",
+      "value": "Blog"
+    },
+    {
+      "key": "code",
+      "value": "Code"
+    },
+    {
+      "key": "collections",
+      "value": "Collections"
+    },
+    {
+      "key": "confirmation",
+      "value": "Confirmation"
+    },
+    {
+      "key": "contact",
+      "value": "Contact"
+    },
+    {
+      "key": "cookie",
+      "value": "cookie"
+    },
+    {
+      "key": "cookies",
+      "value": "Cookies"
+    },
+    {
+      "key": "coupon",
+      "value": "Coupon"
+    },
+    {
+      "key": "date",
+      "value": "Date"
+    },
+    {
+      "key": "denver",
+      "value": "Denver"
+    },
+    {
+      "key": "description",
+      "value": "Description"
+    },
+    {
+      "key": "documentation",
+      "value": "Documentation"
+    },
+    {
+      "key": "faq",
+      "value": "FAQ"
+    },
+    {
+      "key": "image",
+      "value": "Image"
+    },
+    {
+      "key": "info",
+      "value": "Information"
+    },
+    {
+      "key": "logo",
+      "value": "logo"
+    },
+    {
+      "key": "ltr",
+      "value": "LTR"
+    },
+    {
+      "key": "madrid",
+      "value": "Madrid"
+    },
+    {
+      "key": "menu",
+      "value": "Menu"
+    },
+    {
+      "key": "message",
+      "value": "Message"
+    },
+    {
+      "key": "min",
+      "value": "Min"
+    },
+    {
+      "key": "option",
+      "value": "Option"
+    },
+    {
+      "key": "osaka",
+      "value": "Osaka"
+    },
+    {
+      "key": "paris",
+      "value": "Paris"
+    },
+    {
+      "key": "points",
+      "value": "Points"
+    },
+    {
+      "key": "rome",
+      "value": "Rome"
+    },
+    {
+      "key": "rtl",
+      "value": "RTL"
+    },
+    {
+      "key": "tokyo",
+      "value": "Tokyo"
+    },
+    {
+      "key": "transactions",
+      "value": "Transactions"
+    },
+    {
+      "key": "usd",
+      "value": "USD"
+    }
+  ],
+  "arabic": [
+    {
+      "key": "ltr",
+      "value": "LTR"
+    },
+    {
+      "key": "rtl",
+      "value": "RTL"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "filesScanned": 218,
+    "issuesFound": 4,
+    "fixesGenerated": 4
+  },
+  "fixes": [
+    {
+      "file": "src/app/shared/components/header/widgets/mobile-menu/mobile-menu.component.html",
+      "line": 7,
+      "original": "<span>Home</span>",
+      "text": "Home",
+      "fix": "        <span>{{ 'home' | translate }}</span>"
+    },
+    {
+      "file": "src/app/shared/components/header/widgets/mobile-menu/mobile-menu.component.html",
+      "line": 14,
+      "original": "<span>Category</span>",
+      "text": "Category",
+      "fix": "        <span>{{ 'category' | translate }}</span>"
+    },
+    {
+      "file": "src/app/shared/components/header/widgets/mobile-menu/mobile-menu.component.html",
+      "line": 28,
+      "original": "<span>Cart</span>",
+      "text": "Cart",
+      "fix": "        <span>{{ 'cart' | translate }}</span>"
+    },
+    {
+      "file": "src/app/components/account/downloads/downloads.component.html",
+      "line": 10,
+      "original": "<button class=\"btn theme-bg-color text-light\" type=\"button\" (click)=\"search()\">Search</button>",
+      "text": "Search",
+      "fix": "            <button class=\"btn theme-bg-color text-light\" type=\"button\" (click)=\"search()\">{{ 'search' | translate }}</button>"
+    }
+  ]
+}

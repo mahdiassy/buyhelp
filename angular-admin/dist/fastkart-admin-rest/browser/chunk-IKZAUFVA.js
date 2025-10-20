@@ -1,0 +1,1 @@
+var e=[{value:"asc",label:"asc"},{value:"desc",label:"desc"}],l=[{value:"top-selling",label:"Top selling"},{value:"recent",label:"Recent"},{value:"trending",label:"Trending"},{value:"specific-product",label:"Specific-product"},{value:"random",label:"Random"}];export{e as a,l as b};

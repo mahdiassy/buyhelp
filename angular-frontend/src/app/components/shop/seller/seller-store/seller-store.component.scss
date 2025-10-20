@@ -1,0 +1,157 @@
+/* Seller Stores — premium grid environment */
+
+:host {
+	display: block;
+	--seller-store-primary: #5340ff;
+	--seller-store-secondary: #1ec9ff;
+	--seller-store-emerald: #42f5b3;
+	--seller-store-gold: #d4b06a;
+	--seller-store-text-strong: #0b1120;
+	--seller-store-text-soft: rgba(15, 23, 42, 0.68);
+	--seller-store-surface: rgba(255, 255, 255, 0.82);
+	--seller-store-border: rgba(83, 64, 255, 0.16);
+	--seller-store-border-strong: rgba(83, 64, 255, 0.32);
+	--seller-store-shadow: 0 32px 90px rgba(15, 23, 42, 0.16);
+	--seller-store-shadow-hover: 0 36px 120px rgba(15, 23, 42, 0.22);
+	--seller-store-grid: rgba(83, 64, 255, 0.14);
+}
+
+:host-context([data-theme="dark"]),
+:host-context(.dark) {
+	--seller-store-text-strong: rgba(248, 250, 255, 0.96);
+	--seller-store-text-soft: rgba(203, 213, 225, 0.76);
+	--seller-store-surface: rgba(15, 23, 42, 0.75);
+	--seller-store-border: rgba(129, 140, 248, 0.25);
+	--seller-store-border-strong: rgba(129, 140, 248, 0.45);
+	--seller-store-shadow: 0 38px 120px rgba(2, 6, 23, 0.65);
+	--seller-store-shadow-hover: 0 48px 160px rgba(2, 6, 23, 0.82);
+	--seller-store-grid: rgba(129, 140, 248, 0.24);
+}
+
+.seller-grid-section {
+  position: relative;
+  isolation: isolate;
+  padding-block: clamp(1.5rem, 2.5vw, 2.5rem);
+  margin-block-end: clamp(1.5rem, 2.5vw, 2.6rem);
+  overflow: hidden;
+  background: linear-gradient(150deg, rgba(83, 64, 255, 0.19) 0%, rgba(255, 255, 255, 0) 55%),
+              linear-gradient(220deg, rgba(30, 201, 255, 0.15) 8%, transparent 58%),
+              radial-gradient(110% 90% at 85% -10%, rgba(212, 176, 106, 0.18), transparent 65%);
+}
+
+.seller-grid-section::before,
+.seller-grid-section::after {
+	content: '';
+	position: absolute;
+	inset: -40% -15% auto -15%;
+	height: 85%;
+	pointer-events: none;
+	mix-blend-mode: screen;
+	opacity: 0.35;
+	background-image: linear-gradient(95deg, transparent 10%, rgba(255, 255, 255, 0.12) 40%, transparent 70%),
+		linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+	background-size: 100% 100%, 160px 160px, 160px 160px;
+	transform: skewY(-6deg) translateY(-12%);
+	filter: blur(0.5px);
+	z-index: 0;
+}
+
+.seller-grid-section::after {
+	inset: auto -5% -45% -5%;
+	height: 70%;
+	opacity: 0.4;
+	transform: skewY(6deg) translateY(12%);
+}
+
+.seller-grid-section .container-fluid-lg {
+	position: relative;
+	z-index: 1;
+}
+
+.custome-pagination {
+  display: flex;
+  justify-content: center;
+  padding-block: clamp(0.75rem, 1.2vw, 1.2rem);
+  position: relative;
+}
+
+.custome-pagination::before {
+	content: '';
+	position: absolute;
+	inset: auto clamp(1rem, 2vw, 2rem) clamp(1rem, 2vw, 2rem);
+	margin: auto;
+	max-width: 720px;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(83, 64, 255, 0.24), transparent);
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.custome-pagination app-pagination {
+	position: relative;
+	z-index: 1;
+}
+
+.custome-pagination ::ng-deep ul.pagination {
+	gap: 0.5rem;
+	padding: 0.4rem;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.75);
+	box-shadow: 0 18px 42px rgba(15, 23, 42, 0.18);
+	backdrop-filter: blur(12px);
+}
+
+.custome-pagination ::ng-deep .page-item .page-link {
+  border-radius: 999px;
+  border: none;
+  color: var(--seller-store-text-soft);
+  font-weight: 600;
+  min-width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.custome-pagination ::ng-deep .page-item.active .page-link,
+.custome-pagination ::ng-deep .page-item .page-link:hover {
+	background: linear-gradient(135deg, var(--seller-store-primary), var(--seller-store-secondary));
+	color: #fff;
+	box-shadow: 0 12px 30px rgba(83, 64, 255, 0.35);
+	transform: translateY(-2px);
+}
+
+[data-theme="dark"] .custome-pagination ::ng-deep ul.pagination,
+.dark .custome-pagination ::ng-deep ul.pagination {
+	background: rgba(15, 23, 42, 0.78);
+	box-shadow: 0 26px 70px rgba(2, 6, 23, 0.68);
+}
+
+@media (max-width: 767.98px) {
+  .seller-grid-section {
+    padding-block: clamp(1.2rem, 3vw, 1.8rem);
+  }
+
+  .custome-pagination ::ng-deep ul.pagination {
+    gap: 0.3rem;
+    padding: 0.25rem;
+  }
+
+  .custome-pagination ::ng-deep .page-item .page-link {
+    min-width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.seller-grid-section,
+	.custome-pagination ::ng-deep .page-item .page-link {
+		transition: none !important;
+		animation: none !important;
+	}
+}

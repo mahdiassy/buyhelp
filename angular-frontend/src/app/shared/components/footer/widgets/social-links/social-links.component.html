@@ -1,0 +1,25 @@
+<div class="social-link" *ngIf="data?.footer?.facebook || data?.footer?.twitter || data?.footer?.instagram || data?.footer?.pinterest">
+    <h6 class="text-content">{{ 'stay_connected' | translate }}:</h6>
+    <ul>
+        <li *ngIf="data?.footer?.facebook">
+            <a href="javascript:void(0)" (click)="handleSocialLink('Facebook')">
+                <i class="ri-facebook-fill"></i>
+            </a>
+        </li>
+        <li *ngIf="data?.footer?.twitter">
+            <a href="javascript:void(0)" (click)="handleSocialLink('Twitter')">
+                <i class="ri-twitter-fill"></i>
+            </a>
+        </li>
+        <li *ngIf="data?.footer?.instagram">
+            <a href="javascript:void(0)" (click)="handleSocialLink('Instagram')">
+                <i class="ri-instagram-fill"></i>
+            </a>
+        </li>
+        <li *ngIf="data?.footer?.pinterest">
+            <a href="javascript:void(0)" (click)="handleSocialLink('Pinterest')">
+                <i class="ri-pinterest-fill"></i>
+            </a>
+        </li>
+    </ul>
+</div>

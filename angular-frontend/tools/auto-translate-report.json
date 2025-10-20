@@ -1,0 +1,210 @@
+{
+  "timestamp": "2025-10-16T12-34-41",
+  "summary": {
+    "totalScanned": 1118,
+    "realStrings": 46,
+    "newTranslations": 33,
+    "alreadyExists": 13,
+    "totalKeysNow": 571
+  },
+  "newKeys": [
+    {
+      "key": "nodata",
+      "en": "no-data",
+      "fr": "Non-data",
+      "ar": "لا-data"
+    },
+    {
+      "key": "chart",
+      "en": "chart",
+      "fr": "chart",
+      "ar": "chart"
+    },
+    {
+      "key": "logo",
+      "en": "logo",
+      "fr": "logo",
+      "ar": "logo"
+    },
+    {
+      "key": "banner",
+      "en": "banner",
+      "fr": "banner",
+      "ar": "banner"
+    },
+    {
+      "key": "cookie",
+      "en": "cookie",
+      "fr": "cookie",
+      "ar": "cookie"
+    },
+    {
+      "key": "all",
+      "en": "All",
+      "fr": "Tout",
+      "ar": "الكل"
+    },
+    {
+      "key": "profile",
+      "en": "profile",
+      "fr": "Profil",
+      "ar": "الملف الشخصي"
+    },
+    {
+      "key": "category",
+      "en": "Category",
+      "fr": "Catégorie",
+      "ar": "الفئة"
+    },
+    {
+      "key": "my_wish",
+      "en": "My Wish",
+      "fr": "My Wish",
+      "ar": "My Wish"
+    },
+    {
+      "key": "hotsale",
+      "en": "hot-sale",
+      "fr": "hot-Solde",
+      "ar": "hot-تخفيض"
+    },
+    {
+      "key": "support",
+      "en": "support",
+      "fr": "support",
+      "ar": "support"
+    },
+    {
+      "key": "payment",
+      "en": "payment",
+      "fr": "payment",
+      "ar": "payment"
+    },
+    {
+      "key": "playstore",
+      "en": "playstore",
+      "fr": "playstore",
+      "ar": "playstore"
+    },
+    {
+      "key": "appstore",
+      "en": "appstore",
+      "fr": "appstore",
+      "ar": "appstore"
+    },
+    {
+      "key": "basket",
+      "en": "basket",
+      "fr": "basket",
+      "ar": "basket"
+    },
+    {
+      "key": "circle",
+      "en": "circle",
+      "fr": "circle",
+      "ar": "circle"
+    },
+    {
+      "key": "quick_view",
+      "en": "Quick View",
+      "fr": "Aperçu rapide",
+      "ar": "عرض سريع"
+    },
+    {
+      "key": "background_image",
+      "en": "Background Image",
+      "fr": "Background Image",
+      "ar": "Background Image"
+    },
+    {
+      "key": "close",
+      "en": "Close",
+      "fr": "Fermer",
+      "ar": "إغلاق"
+    },
+    {
+      "key": "ordertracking",
+      "en": "order-tracking",
+      "fr": "order-tracking",
+      "ar": "order-tracking"
+    },
+    {
+      "key": "no_results_found",
+      "en": "No results found.",
+      "fr": "Non résultats found.",
+      "ar": "لا نتيجة found."
+    },
+    {
+      "key": "sort",
+      "en": "sort",
+      "fr": "sort",
+      "ar": "sort"
+    },
+    {
+      "key": "offer_gif",
+      "en": "offer gif",
+      "fr": "offer gif",
+      "ar": "offer gif"
+    },
+    {
+      "key": "error_page",
+      "en": "error page",
+      "fr": "Erreur Page",
+      "ar": "خطأ صفحة"
+    },
+    {
+      "key": "contactus",
+      "en": "contact-us",
+      "fr": "Contact-us",
+      "ar": "اتصل بنا-us"
+    },
+    {
+      "key": "icon",
+      "en": "icon",
+      "fr": "icon",
+      "ar": "icon"
+    },
+    {
+      "key": "login",
+      "en": "login",
+      "fr": "Connexion",
+      "ar": "تسجيل الدخول"
+    },
+    {
+      "key": "wallet",
+      "en": "wallet",
+      "fr": "wallet",
+      "ar": "wallet"
+    },
+    {
+      "key": "coverimg",
+      "en": "cover-img",
+      "fr": "cover-img",
+      "ar": "cover-img"
+    },
+    {
+      "key": "coin",
+      "en": "coin",
+      "fr": "coin",
+      "ar": "coin"
+    },
+    {
+      "key": "nonrefundable",
+      "en": "Non-Refundable",
+      "fr": "Non-Refundable",
+      "ar": "Non-Refundable"
+    },
+    {
+      "key": "order",
+      "en": "order",
+      "fr": "order",
+      "ar": "order"
+    },
+    {
+      "key": "dashboardprofile",
+      "en": "dashboard-profile",
+      "fr": "dashboard-Profil",
+      "ar": "dashboard-الملف الشخصي"
+    }
+  ]
+}

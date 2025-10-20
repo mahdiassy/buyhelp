@@ -1,0 +1,93 @@
+.language-switcher {
+  position: relative;
+
+  .dropdown-menu {
+    min-width: 200px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &.rtl {
+      text-align: right;
+      
+      .dropdown-item {
+        text-align: right;
+        direction: rtl;
+
+        .iti-flag {
+          margin-right: 0;
+          margin-left: 0.75rem;
+        }
+
+        .check-icon {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+    }
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      position: relative;
+
+      .iti-flag {
+        margin-right: 0.75rem;
+        flex-shrink: 0;
+      }
+
+      span {
+        flex: 1;
+      }
+
+      .check-icon {
+        color: var(--theme-color, #0baf9a);
+        font-size: 1rem;
+        margin-left: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      &.active {
+        background-color: rgba(var(--theme-color-rgb, 11, 175, 154), 0.1);
+        color: var(--theme-color, #0baf9a);
+        font-weight: 600;
+      }
+
+      &:focus {
+        outline: 2px solid var(--theme-color, #0baf9a);
+        outline-offset: -2px;
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .iti-flag {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// RTL Support for button
+[dir="rtl"] {
+  .language-switcher {
+    button {
+      .iti-flag {
+        margin-right: 0;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<!-- Language Basic Style -->
+<div *ngIf="style == 'basic'" (clickOutside)="hideDropdown()" class="language-switcher">
+  <app-button
+    [class]="'btn dropdown-toggle'"
+    [type]="'button'"
+    [id]="'open_dropdown_basic_btn'"
+    [spinner]="false"
+    [attr.aria-label]="'language.select' | translate"
+    (click)="openDropDown()">
+    <span>
+      <div class="iti-flag {{ selectedLanguage.flag }}"></div> 
+      {{ selectedLanguage.nativeName }}
+    </span>
+  </app-button>
+  <ul class="dropdown-menu dropdown-menu-end language-dropdown" 
+      [class.show]="active" 
+      [class.rtl]="i18nService.isRTL()"
+      role="menu">
+      <li *ngFor="let language of languages" role="none">
+          <a class="dropdown-item" 
+             href="javascript:void(0)" 
+             role="menuitem"
+             [class.active]="isSelected(language)"
+             [attr.aria-label]="'language.switch_to' | translate:{ lang: language.name }"
+             (click)="selectLanguage(language)">
+            <div class="iti-flag {{ language.flag }}"></div>
+            <span>{{ language.nativeName }}</span>
+            <i class="ri-check-line check-icon" *ngIf="isSelected(language)"></i>
+          </a>
+      </li>
+  </ul>
+</div>
+
+<!-- Language Standard Style -->
+<div *ngIf="style == 'standard'" (clickOutside)="hideDropdown()" class="language-switcher">
+    <app-button
+      [class]="'dropdown-toggle'"
+      [type]="'button'"
+      [id]="'open_dropdown_standard_btn'"
+      [spinner]="false"
+      [attr.aria-label]="'language.select' | translate"
+      (click)="openDropDown()">
+      <span>
+        <div class="iti-flag {{ selectedLanguage.flag }}"></div> 
+        {{ selectedLanguage.nativeName }}
+      </span> 
+      <i class="ri-arrow-{{ active ? 'up' : 'down' }}-s-line"></i>
+    </app-button>
+    <ul class="dropdown-menu" 
+        [class.show]="active"
+        [class.rtl]="i18nService.isRTL()"
+        role="menu">
+        <li *ngFor="let language of languages" role="none">
+            <a class="dropdown-item" 
+               href="javascript:void(0)" 
+               role="menuitem"
+               [class.active]="isSelected(language)"
+               [attr.aria-label]="'language.switch_to' | translate:{ lang: language.name }"
+               (click)="selectLanguage(language)">
+              <div class="iti-flag {{ language.flag }}"></div>
+              <span>{{ language.nativeName }}</span>
+              <i class="ri-check-line check-icon" *ngIf="isSelected(language)"></i>
+            </a>
+        </li>
+    </ul>
+</div>

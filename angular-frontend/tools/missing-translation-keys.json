@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "totalExisting": 677,
+    "totalUsed": 381,
+    "totalMissing": 15
+  },
+  "missingKeys": [
+    "Become a Seller",
+    "Download",
+    "Featured",
+    "Guest",
+    "Help Center",
+    "Login With Mobile Number",
+    "Max QTY",
+    "Min QTY",
+    "Payment Option",
+    "Refund Status",
+    "Send Otp",
+    "Subscribe",
+    "Total Price:",
+    "have_a_promo_code?",
+    "reCaptcha is required"
+  ],
+  "suggestions": {
+    "Become a Seller": {
+      "en": "Become A Seller",
+      "fr": "[FR] Become A Seller",
+      "ar": "[AR] Become A Seller"
+    },
+    "Download": {
+      "en": "Download",
+      "fr": "[FR] Download",
+      "ar": "[AR] Download"
+    },
+    "Featured": {
+      "en": "Featured",
+      "fr": "[FR] Featured",
+      "ar": "[AR] Featured"
+    },
+    "Guest": {
+      "en": "Guest",
+      "fr": "[FR] Guest",
+      "ar": "[AR] Guest"
+    },
+    "Help Center": {
+      "en": "Help Center",
+      "fr": "[FR] Help Center",
+      "ar": "[AR] Help Center"
+    },
+    "Login With Mobile Number": {
+      "en": "Login With Mobile Number",
+      "fr": "[FR] Login With Mobile Number",
+      "ar": "[AR] Login With Mobile Number"
+    },
+    "Max QTY": {
+      "en": "Max QTY",
+      "fr": "[FR] Max QTY",
+      "ar": "[AR] Max QTY"
+    },
+    "Min QTY": {
+      "en": "Min QTY",
+      "fr": "[FR] Min QTY",
+      "ar": "[AR] Min QTY"
+    },
+    "Payment Option": {
+      "en": "Payment Option",
+      "fr": "[FR] Payment Option",
+      "ar": "[AR] Payment Option"
+    },
+    "Refund Status": {
+      "en": "Refund Status",
+      "fr": "[FR] Refund Status",
+      "ar": "[AR] Refund Status"
+    },
+    "Send Otp": {
+      "en": "Send Otp",
+      "fr": "[FR] Send Otp",
+      "ar": "[AR] Send Otp"
+    },
+    "Subscribe": {
+      "en": "Subscribe",
+      "fr": "[FR] Subscribe",
+      "ar": "[AR] Subscribe"
+    },
+    "Total Price:": {
+      "en": "Total Price:",
+      "fr": "[FR] Total Price:",
+      "ar": "[AR] Total Price:"
+    },
+    "have_a_promo_code?": {
+      "en": "Have A Promo Code?",
+      "fr": "[FR] Have A Promo Code?",
+      "ar": "[AR] Have A Promo Code?"
+    },
+    "reCaptcha is required": {
+      "en": "ReCaptcha Is Required",
+      "fr": "[FR] ReCaptcha Is Required",
+      "ar": "[AR] ReCaptcha Is Required"
+    }
+  }
+}

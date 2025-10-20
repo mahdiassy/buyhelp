@@ -1,0 +1,342 @@
+// Luxury, modern, and performance-friendly styling for Blogs page
+// Non-breaking: targets existing classes only; no layout/DOM changes
+
+.blog-section {
+  // Elegant spacing and subtle section backdrop
+  position: relative;
+  background: linear-gradient(180deg, rgba(8, 9, 12, 0.02) 0%, rgba(8, 9, 12, 0) 100%);
+  overflow: hidden;
+
+  // Decorative but lightweight gradient accents (masked for GPU efficiency)
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    inset: auto auto -20% -10%;
+    width: 40rem;
+    height: 40rem;
+    background: radial-gradient(closest-side, rgba(111, 76, 255, 0.08), transparent 70%);
+    filter: blur(24px);
+    transform: translate3d(0, 0, 0);
+  }
+
+  &::after {
+    inset: -10% -15% auto auto;
+    width: 36rem;
+    height: 36rem;
+    background: radial-gradient(closest-side, rgba(0, 190, 160, 0.08), transparent 70%);
+  }
+}
+
+// Blog card
+.blog-box {
+  position: relative;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 2px 14px rgba(16, 24, 40, 0.06);
+  transition: transform 320ms ease, box-shadow 320ms ease, background 320ms ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  // Featured sticky accent without shifting layout
+  &.sticky-blog-box {
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.12);
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 38px rgba(16, 24, 40, 0.14);
+  }
+}
+
+.blog-label-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+
+  span {
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border-radius: 999px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6f4cff 0%, #00bea0 100%);
+    box-shadow: 0 6px 18px rgba(111, 76, 255, 0.25);
+  }
+}
+
+.blog-image {
+  position: relative;
+  overflow: hidden;
+  background: #0f172a10;
+
+  a,
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  img {
+    height: auto;
+    transform: scale3d(1, 1, 1);
+    transition: transform 500ms ease, filter 500ms ease;
+    will-change: transform;
+  }
+
+  // Subtle zoom/clarity on hover
+  .blog-box:hover & img {
+    transform: scale3d(1.045, 1.045, 1);
+    filter: saturate(1.02) contrast(1.02);
+  }
+}
+
+.blog-contain,
+.blog-contain-2 {
+  padding: 18px 18px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+
+  .blog-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+    color: #667085;
+
+    .time,
+    .super {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    i {
+      font-size: 14px;
+      color: #6f4cff;
+    }
+  }
+
+  h3 {
+    margin: 6px 0 10px;
+    font-size: 18px;
+    line-height: 1.35;
+    color: #101828;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    transition: color 220ms ease;
+  }
+
+  a:hover h3 {
+    color: #6f4cff;
+  }
+
+  p {
+    margin: 0 0 14px;
+    color: #475467;
+    line-height: 1.6;
+  }
+}
+
+// Read more button with underline slide animation
+.blog-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #6f4cff;
+  font-weight: 600;
+  position: relative;
+  transition: color 220ms ease, transform 220ms ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #6f4cff, #00bea0);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 260ms ease;
+  }
+
+  i { transition: transform 220ms ease; }
+
+  &:hover {
+    color: #593bff;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+
+  &:hover i {
+    transform: translateX(2px);
+  }
+}
+
+// List view tweaks (no layout change, just refined spacing)
+.blog-list {
+  .blog-image {
+    max-height: 320px;
+  }
+  .blog-contain-2 {
+    padding: 22px;
+  }
+}
+
+// Pagination polish
+nav.custome-pagination {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  .pagination,
+  app-pagination {
+    filter: drop-shadow(0 2px 8px rgba(16, 24, 40, 0.08));
+  }
+}
+
+// Sidebar visual refinement
+.left-sidebar-box {
+  position: sticky;
+  top: 18px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 2px 14px rgba(16, 24, 40, 0.06);
+  padding: 12px;
+}
+
+// Smooth fade-up entrance for cards (non-blocking)
+@keyframes blogFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-section .blog-box {
+  opacity: 0;
+  animation: blogFadeUp 540ms ease forwards;
+}
+
+// Stagger using nth-child without JS
+.blog-section .row > [class*="col-"]:nth-child(1) .blog-box { animation-delay: 40ms; }
+.blog-section .row > [class*="col-"]:nth-child(2) .blog-box { animation-delay: 80ms; }
+.blog-section .row > [class*="col-"]:nth-child(3) .blog-box { animation-delay: 120ms; }
+.blog-section .row > [class*="col-"]:nth-child(4) .blog-box { animation-delay: 160ms; }
+.blog-section .row > [class*="col-"]:nth-child(5) .blog-box { animation-delay: 200ms; }
+.blog-section .row > [class*="col-"]:nth-child(6) .blog-box { animation-delay: 240ms; }
+
+// Responsive refinements (no change to grid columns)
+@media (max-width: 991.98px) {
+  .blog-contain,
+  .blog-contain-2 {
+    padding: 16px;
+  }
+
+  .left-sidebar-box {
+    position: relative;
+    top: 0;
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .blog-contain,
+  .blog-contain-2 {
+    h3 { font-size: 17px; }
+    p { font-size: 14px; }
+  }
+}
+
+// Optional dark theme support
+// Applies when a parent sets .dark, .dark-theme, or [data-theme="dark"]
+.dark .blog-section,
+.dark-theme .blog-section,
+[data-theme="dark"] .blog-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.dark .blog-box,
+.dark-theme .blog-box,
+[data-theme="dark"] .blog-box {
+  background: #0b1220;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+.dark .blog-contain,
+.dark .blog-contain-2,
+.dark-theme .blog-contain,
+.dark-theme .blog-contain-2,
+[data-theme="dark"] .blog-contain,
+[data-theme="dark"] .blog-contain-2 {
+  background: linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
+}
+
+.dark .blog-contain .blog-label,
+.dark .blog-contain-2 .blog-label,
+.dark-theme .blog-contain .blog-label,
+.dark-theme .blog-contain-2 .blog-label,
+[data-theme="dark"] .blog-contain .blog-label,
+[data-theme="dark"] .blog-contain-2 .blog-label { color: #98a2b3; }
+
+.dark .blog-contain .blog-label i,
+.dark .blog-contain-2 .blog-label i,
+.dark-theme .blog-contain .blog-label i,
+.dark-theme .blog-contain-2 .blog-label i,
+[data-theme="dark"] .blog-contain .blog-label i,
+[data-theme="dark"] .blog-contain-2 .blog-label i { color: #8a77ff; }
+
+.dark .blog-contain h3,
+.dark .blog-contain-2 h3,
+.dark-theme .blog-contain h3,
+.dark-theme .blog-contain-2 h3,
+[data-theme="dark"] .blog-contain h3,
+[data-theme="dark"] .blog-contain-2 h3 { color: #e4e7ec; }
+
+.dark .blog-contain a:hover h3,
+.dark .blog-contain-2 a:hover h3,
+.dark-theme .blog-contain a:hover h3,
+.dark-theme .blog-contain-2 a:hover h3,
+[data-theme="dark"] .blog-contain a:hover h3,
+[data-theme="dark"] .blog-contain-2 a:hover h3 { color: #b9a8ff; }
+
+.dark .blog-contain p,
+.dark .blog-contain-2 p,
+.dark-theme .blog-contain p,
+.dark-theme .blog-contain-2 p,
+[data-theme="dark"] .blog-contain p,
+.dark-theme .blog-contain-2 p { color: #cbd5e1; }
+
+.dark .blog-button,
+.dark-theme .blog-button,
+[data-theme="dark"] .blog-button {
+  color: #b9a8ff;
+}
+
+.dark .blog-button:hover,
+.dark-theme .blog-button:hover,
+[data-theme="dark"] .blog-button:hover { color: #d2c9ff; }
+
+.dark .blog-button::after,
+.dark-theme .blog-button::after,
+[data-theme="dark"] .blog-button::after { background: linear-gradient(90deg, #b9a8ff, #5eead4); }
+
+.dark .left-sidebar-box,
+.dark-theme .left-sidebar-box,
+[data-theme="dark"] .left-sidebar-box {
+  background: #0b1220;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
