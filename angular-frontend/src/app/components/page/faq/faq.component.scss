@@ -222,3 +222,158 @@ section.faq-box-contain {
     border-radius: 14px;
   }
 }
+
+/* ============================================
+   DARK MODE STYLES - FAQ PAGE
+   ============================================ */
+
+.dark,
+.dark-theme,
+[data-theme="dark"] {
+  // Dark mode CSS variables
+  --primary: #10b981; /* emerald for dark mode */
+  --secondary: #06b6d4; /* cyan */
+  --text: #e4e7ec; /* light gray for text */
+  --muted: #98a2b3; /* muted gray */
+  --card: #0b1220; /* dark card background */
+  --ring: rgba(16, 185, 129, 0.18);
+}
+
+// FAQ Section Background
+.dark section.faq-box-contain,
+.dark-theme section.faq-box-contain,
+[data-theme="dark"] section.faq-box-contain {
+  background: transparent;
+}
+
+// FAQ Intro Container
+.dark .faq-contain,
+.dark-theme .faq-contain,
+[data-theme="dark"] .faq-contain {
+  background: #0b1220;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+// FAQ Title with Gradient
+.dark .faq-contain h2,
+.dark-theme .faq-contain h2,
+[data-theme="dark"] .faq-contain h2 {
+  color: #e4e7ec;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// FAQ Subtitle
+.dark .faq-contain p,
+.dark-theme .faq-contain p,
+[data-theme="dark"] .faq-contain p {
+  color: #98a2b3;
+}
+
+// FAQ Accordion Container
+.dark .faq-accordion,
+.dark-theme .faq-accordion,
+[data-theme="dark"] .faq-accordion {
+  background: #0b1220;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+// Decorative glow effect
+.dark .faq-accordion::after,
+.dark-theme .faq-accordion::after,
+[data-theme="dark"] .faq-accordion::after {
+  background: radial-gradient(circle at center, rgba(6, 182, 212, 0.12), rgba(16, 185, 129, 0.08) 60%, transparent 70%);
+}
+
+.dark .faq-accordion::before,
+.dark-theme .faq-accordion::before,
+[data-theme="dark"] .faq-accordion::before {
+  background: radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.18), rgba(6, 182, 212, 0.14) 60%, transparent 70%);
+}
+
+// Accordion Items - Borders
+.dark :host ::ng-deep .faq-accordion .accordion-item,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-item,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+// Accordion Button - Collapsed State
+.dark :host ::ng-deep .faq-accordion .accordion-button,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-button,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-button {
+  background: #0f1825;
+  color: #e4e7ec;
+}
+
+// Accordion Button - Accent Bar
+.dark :host ::ng-deep .faq-accordion .accordion-button::before,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-button::before,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-button::before {
+  background: linear-gradient(180deg, #10b981, #06b6d4);
+}
+
+// Accordion Button - Expanded State
+.dark :host ::ng-deep .faq-accordion .accordion-button:not(.collapsed),
+.dark-theme :host ::ng-deep .faq-accordion .accordion-button:not(.collapsed),
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-button:not(.collapsed) {
+  background: linear-gradient(180deg, rgba(15, 24, 37, 0.95), #0f1825);
+  box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.18) inset;
+  color: #e4e7ec;
+}
+
+// Accordion Button - Hover State
+.dark :host ::ng-deep .faq-accordion .accordion-button:hover,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-button:hover,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-button:hover {
+  background: #141f30;
+}
+
+// Accordion Button - Focus State
+.dark :host ::ng-deep .faq-accordion .accordion-button:focus,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-button:focus,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-button:focus {
+  box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.18);
+}
+
+// Accordion Button - Focus-Visible for Keyboard Users
+.dark :host ::ng-deep .faq-accordion .accordion-button:focus-visible,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-button:focus-visible,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-button:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+// Accordion Body Content
+.dark :host ::ng-deep .faq-accordion .accordion-body,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-body,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-body {
+  background: linear-gradient(180deg, rgba(15, 24, 37, 0.7), rgba(11, 18, 32, 1));
+  color: #98a2b3;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+// Accordion Body Paragraph
+.dark :host ::ng-deep .faq-accordion .accordion-body p,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-body p,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-body p {
+  color: #cbd5e1;
+}
+
+// Icon Color in Dark Mode
+.dark :host ::ng-deep .faq-accordion .accordion-button i,
+.dark-theme :host ::ng-deep .faq-accordion .accordion-button i,
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-button i {
+  color: #10b981;
+}
+
+// Enhanced contrast for expanded accordion titles
+.dark :host ::ng-deep .faq-accordion .accordion-button:not(.collapsed),
+.dark-theme :host ::ng-deep .faq-accordion .accordion-button:not(.collapsed),
+[data-theme="dark"] :host ::ng-deep .faq-accordion .accordion-button:not(.collapsed) {
+  font-weight: 600;
+}
