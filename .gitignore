@@ -1,0 +1,86 @@
+# ==================================
+# BuyHelp Project .gitignore
+# ==================================
+
+# ============ Angular ============
+# Angular Frontend & Admin
+angular-frontend/node_modules/
+angular-frontend/dist/
+angular-frontend/.angular/
+angular-frontend/.vscode/
+angular-frontend/npm-debug.log*
+angular-frontend/yarn-error.log*
+
+angular-admin/node_modules/
+angular-admin/dist/
+angular-admin/.angular/
+angular-admin/.vscode/
+angular-admin/npm-debug.log*
+angular-admin/yarn-error.log*
+
+# ============ Laravel API ============
+API/vendor/
+API/node_modules/
+API/.env
+API/.env.backup
+API/.env.production
+API/.env.staging
+API/.phpunit.result.cache
+API/Homestead.json
+API/Homestead.yaml
+API/npm-debug.log
+API/yarn-error.log
+
+# Storage & Cache
+API/storage/*.key
+API/storage/app/public/*
+!API/storage/app/public/.gitkeep
+API/storage/framework/cache/*
+!API/storage/framework/cache/.gitkeep
+API/storage/framework/sessions/*
+!API/storage/framework/sessions/.gitkeep
+API/storage/framework/views/*
+!API/storage/framework/views/.gitkeep
+API/storage/logs/*
+!API/storage/logs/.gitkeep
+API/storage/dotenv-editor/backups/
+
+# Bootstrap Cache
+API/bootstrap/cache/*
+!API/bootstrap/cache/.gitkeep
+
+# Public Storage
+API/public/storage
+API/public/hot
+
+# ============ IDEs ============
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============ OS Files ============
+*.log
+.cache/
+.tmp/
+
+# ============ Build artifacts ============
+*.zip
+*.tar.gz
+*.rar
+
+# ============ Sensitive Files ============
+*.pem
+*.key
+*.cert
+.env.local
+.env.*.local
+
+# Keep important files
+!API/.env.example
+!API/storage/app/.gitignore
+!API/storage/framework/.gitignore
+!API/storage/logs/.gitignore
