@@ -1,0 +1,31 @@
+// Production Environment Configuration for Admin Panel
+// INSTRUCTIONS: Replace 'yourdomain.com' with your actual domain before building
+
+export const environment = {
+  production: true,
+  
+  // 🔴 IMPORTANT: Update this to your actual API domain
+  apiUrl: 'https://api.yourdomain.com/graphql',
+  
+  // Optional: Add other production configurations
+  appUrl: 'https://admin.yourdomain.com',
+  
+  // Enable/disable features
+  enableAnalytics: true,
+  enableDebugMode: false,
+  
+  // API settings
+  apiTimeout: 30000, // 30 seconds
+  
+  // File upload settings
+  maxFileSize: 5242880, // 5MB in bytes
+  allowedImageTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
+  
+  // Pagination
+  defaultPageSize: 10,
+  
+  // Cache settings
+  cacheTimeout: 300000, // 5 minutes
+};
+
+// After updating this file, run: npm run build

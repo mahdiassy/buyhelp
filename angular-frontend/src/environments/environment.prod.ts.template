@@ -1,0 +1,38 @@
+// Production Environment Configuration for Customer Frontend
+// INSTRUCTIONS: Replace 'yourdomain.com' with your actual domain before building
+
+export const environment = {
+  production: true,
+  
+  // 🔴 IMPORTANT: Update this to your actual API domain
+  apiUrl: 'https://api.yourdomain.com/graphql',
+  
+  // Optional: Add other production configurations
+  appUrl: 'https://shop.yourdomain.com',
+  
+  // Enable/disable features
+  enableAnalytics: true,
+  enableDebugMode: false,
+  
+  // API settings
+  apiTimeout: 30000, // 30 seconds
+  
+  // File upload settings
+  maxFileSize: 5242880, // 5MB in bytes
+  allowedImageTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp'],
+  
+  // Pagination
+  defaultPageSize: 12,
+  productsPerPage: 24,
+  
+  // Cache settings
+  cacheTimeout: 300000, // 5 minutes
+  
+  // Payment gateway (if needed)
+  stripePublicKey: 'pk_live_YOUR_KEY_HERE',
+  
+  // Google Maps (if needed)
+  googleMapsApiKey: 'YOUR_KEY_HERE',
+};
+
+// After updating this file, run: npm run build
